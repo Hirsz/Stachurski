@@ -10,39 +10,39 @@
 <body>
     <center>   
     <form action="" method="get"></form>
-    <input type="text" placeholder="Imie"><br>
-    <input type="text" placeholder="Nazwisko"><br>  
+    <input type="text" id="Imie">Imie<br>
+    <input type="text" id="Nazwisko">Nazwisko<br>  
     <!-- Pole typu RADIO -->
 
     <p><h1>Co lubisz bardziej ?</h1></p>
-    <input type="radio" name="Jedzenie" value="Pizza">Pizza<br>
-    <input type="radio" name="Jedzenie" value="Burger">Burger<br>
+    <input type="radio" id="Jedzenie_1" value="Pizza">Pizza<br>
+    <input type="radio" id="Jedzenie_2" value="Burger">Burger<br>
 
     <!-- Pole typu RADIO -->
 
     <p><h1>Czy jesteś wegetarianinem ?</h1></p>
-    <input type="radio" name="Jedzenie" value="Tak">Tak<br>
-    <input type="radio" name="Jedzenie" value="Nie">Nie<br>
+    <input type="radio" id="Jedzenie_3" value="Tak">Tak<br>
+    <input type="radio" id="Jedzenie_4" value="Nie">Nie<br>
 
     <!-- Pole typu CHECKBOX -->
     <p><h1>Jaka lubisz pizze (Jesli wybrales pizze, możesz zaznaczyć więcej możliwości) ?</h1></p>
-    <input type="checkbox" name="Jedzenie" value="Margharita">Margharita<br>
-    <input type="checkbox" name="Jedzenie" value="Capriciosa">Capriciosa<br>
-    <input type="checkbox" name="Jedzenie" value="Hawajska">Hawajska<br>
-    <input type="checkbox" name="Jedzenie" value="Miesna">Miesna<br>
+    <input type="checkbox" id="Jedzenie_5" value="Margharita">Margharita<br>
+    <input type="checkbox" id="Jedzenie_6" value="Capriciosa">Capriciosa<br>
+    <input type="checkbox" id="Jedzenie_7" value="Hawajska">Hawajska<br>
+    <input type="checkbox" id="Jedzenie_8" value="Miesna">Miesna<br>
 
     <!-- Pole typu CHECKBOX -->
 
     <p><h1>Jakiego lubisz burgera (Jesli wybrales burgera, możesz zaznaczyć więcej możliwości) ?</h1></p>
-    <input type="checkbox" name="Jedzenie" value="Classic">Classic<br>
-    <input type="checkbox" name="Jedzenie" value="Cheesburger">Cheesburger<br>
-    <input type="checkbox" name="Jedzenie" value="Vege">Vege<br>
-    <input type="checkbox" name="Jedzenie" value="Drwala">Drwala<br>
+    <input type="checkbox" id="Jedzenie_9" value="Classic">Classic<br>
+    <input type="checkbox" id="Jedzenie_10" value="Cheesburger">Cheesburger<br>
+    <input type="checkbox" id="Jedzenie_11" value="Vege">Vege<br>
+    <input type="checkbox" id="Jedzenie_12" value="Drwala">Drwala<br>
 
     <!-- Lista rozwijalna (typ podstawowy) z zaznaczoną opcją domyślną -->
 
     <p><h1>Jaki rozmiar pizzy lubisz najbardziej?</h1></p>
-    <select name="Rozmiar">
+    <select id="Rozmiar">
 	<option selected>30</option>
 	<option>40</option>
 	<option>60</option>
@@ -57,7 +57,7 @@
 
     <!-- Przycisk WYŚLIJ -->
 
-    <input type="submit" value="Wyślij formularz">
+    <button onclick="myFunction()">Wyslij formularz</button>
 
     <!-- Przycisk WYCZYŚĆ DANE -->
 
@@ -65,6 +65,65 @@
 
     </center>
 </div></form>
+<p id="pizza"></p>
+
+<script>
+function myFunction() {
+    var burger1 = document.getElementById("Imie").value;
+  console.log("Imie:   ", burger1);
+  var burger = document.getElementById("Nazwisko").value;
+  console.log("Nazwisko:   ",burger);
+    var aa = document.getElementById("Jedzenie_1").value; 
+   if(document.getElementById("Jedzenie_1").value){
+    console.log("Co lubisz bardziej:   ",aa);
+   };
+   var bb = document.getElementById("Jedzenie_2").value; 
+   if(document.getElementById("Jedzenie_2").value){
+    console.log("Co lubisz bardziej:   ",bb);
+   };
+   var cc = document.getElementById("Jedzenie_3").value; 
+   if(document.getElementById("Jedzenie_3").value){
+    console.log("Czy jestes wege:   ",cc);
+   };
+   var dd = document.getElementById("Jedzenie_4").value; 
+   if(document.getElementById("Jedzenie_4").value){
+    console.log("Czy jestes wege:   ",dd);
+   };
+   var ee = document.getElementById("Jedzenie_5").value; 
+   if(document.getElementById("Jedzenie_5").checked){
+    console.log("Jaka lubisz pizze:     ", ee);
+   };
+   var ff = document.getElementById("Jedzenie_6").value; 
+   if(document.getElementById("Jedzenie_6").checked){
+    console.log("Jaka lubisz pizze:     ",ff);
+   };
+   var gg = document.getElementById("Jedzenie_7").value; 
+   if(document.getElementById("Jedzenie_7").checked){
+    console.log("Jaka lubisz pizze:     ",gg);
+   };
+   var hh = document.getElementById("Jedzenie_8").value; 
+   if(document.getElementById("Jedzenie_8").checked){
+    console.log("Jaka lubisz pizze:     ",hh);
+   };
+   var ii = document.getElementById("Jedzenie_9").value; 
+   if(document.getElementById("Jedzenie_9").checked){
+    console.log("Jakiego lubisz burgera:     ",ii);
+   };
+   var jj = document.getElementById("Jedzenie_10").value; 
+   if(document.getElementById("Jedzenie_10").checked){
+    console.log("Jakiego lubisz burgera:     ",jj);
+   };
+   var kk = document.getElementById("Jedzenie_11").value; 
+   if(document.getElementById("Jedzenie_11").checked){
+    console.log("Jakiego lubisz burgera:     ",kk);
+   };
+   var ll = document.getElementById("Jedzenie_12").value; 
+   if(document.getElementById("Jedzenie_12").checked){
+    console.log("Jakiego lubisz burgera:     ",ll);
+   };
+}
+</script>
+
 </select>
 </body>
 </html>
