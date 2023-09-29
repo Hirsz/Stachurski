@@ -35,7 +35,15 @@ echo "<br>";
 
 
 $con = new mysqli("127.0.0.1","root","","oliwier");
-$q="INSERT INTO  `farby` (`id_farby`,`kolor`, `cena`, `pojemnosc`) VALUES ('".$rand."', '".$chuj4."', '".$chuj1."', '".$chuj4525."')";
+$q= "INSERT INTO  farby (id_farby,kolor, cena, pojemnosc) VALUES (" . $rand . ", '$chuj4', '$chuj1', '$chuj4525')";
 $wynik=$con->query($q);
 //INSERT INTO `farby` (`id_farby`, `kolor`, `cena`, `pojemnosc`) VALUES ('244', 'lolol', '4', '44');
+ 
+$q="SELECT * FROM farby";
+ 
+if($wynik=$con->query($q))
+while($row=$wynik->fetch_array())
+echo $row["id_farby"] . ";" . $row["kolor"] . ";" . $row["cena"] . "<br/>";
+else
+echo $con->errno . " " . $con->error;
 ?>
