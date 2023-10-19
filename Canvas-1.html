@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///D:/Users/hirsz/Desktop/Canvas-1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+
+//glowna glowa
+ctx.beginPath();
+ctx.arc(200,150,100,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#3399FF";
+ctx.fill();
+
+//oczy
+ctx.beginPath();
+ctx.arc(200,110,25,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#000000";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(250,110,25,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#000000";
+ctx.fill();
+
+//kolka w oczach
+ctx.beginPath();
+ctx.arc(210,110,15,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#fffff0";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(260,110,15,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#fffff0";
+ctx.fill();
+
+//armata 
+ctx.beginPath();
+ctx.arc(370,150,70,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#3399FF";
+ctx.fill();
+
+//mniejsze w armacie
+ctx.beginPath();
+ctx.arc(370,150,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#3399FF";
+ctx.fill();
+
+// 1 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(50,150);
+ctx.lineTo(100,150);
+ctx.stroke();
+
+// 2 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(50,110);
+ctx.lineTo(109,110);
+ctx.stroke();
+
+// 3 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(50,110);
+ctx.lineTo(50,150);
+ctx.stroke();
+
+// 4 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(10,130);
+ctx.lineTo(50,150);
+ctx.stroke();
+
+// 5 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(10,130);
+ctx.lineTo(50,110);
+ctx.stroke();
+
+// 6 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(50,90);
+ctx.lineTo(120,90);
+ctx.stroke();
+
+// 7 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(50,58);
+ctx.lineTo(160,58);
+ctx.stroke();
+
+// 8 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(50,90);
+ctx.lineTo(50,58);
+ctx.stroke();
+
+// 9 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(10,80);
+ctx.lineTo(50,58);
+ctx.stroke();
+
+// 10 kreska cos na glowie po lewej stronie
+ctx.beginPath();
+ctx.moveTo(10,80);
+ctx.lineTo(50,90);
+ctx.stroke();
+
+
+
+//gorna czesc
+
+//dolna czesc
+
+//1 linia ty kurwo 
+ctx.beginPath();
+ctx.moveTo(180, 250);
+ctx.quadraticCurveTo(160, 350, canvas.width-300, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+//2 linia ty szmato
+ctx.beginPath();
+ctx.moveTo(220, 250);
+ctx.quadraticCurveTo(180, 350, canvas.width-250, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+//3 linia ty ruro
+ctx.beginPath();
+ctx.moveTo(199,400);
+ctx.lineTo(250,400);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+
+//liscie 
+ctx.beginPath();
+ctx.arc(180,435,40,0,2*Math.PI);
+ctx.stroke();
+
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(260,430,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+
+</script> 
+
+
+
+
+</body></html>
