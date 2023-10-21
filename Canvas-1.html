@@ -21,14 +21,14 @@ ctx.fill();
 
 //oczy
 ctx.beginPath();
-ctx.arc(200,110,25,0,2*Math.PI);
+ctx.arc(200,120,25,0,2*Math.PI);
 ctx.stroke();
 
 ctx.fillStyle = "#000000";
 ctx.fill();
 
 ctx.beginPath();
-ctx.arc(250,110,25,0,2*Math.PI);
+ctx.arc(250,100,25,0,2*Math.PI);
 ctx.stroke();
 
 ctx.fillStyle = "#000000";
@@ -36,14 +36,14 @@ ctx.fill();
 
 //kolka w oczach
 ctx.beginPath();
-ctx.arc(210,110,15,0,2*Math.PI);
+ctx.arc(190,120,10,0,2*Math.PI);
 ctx.stroke();
 
 ctx.fillStyle = "#fffff0";
 ctx.fill();
 
 ctx.beginPath();
-ctx.arc(260,110,15,0,2*Math.PI);
+ctx.arc(240,100,7,0,2*Math.PI);
 ctx.stroke();
 
 ctx.fillStyle = "#fffff0";
@@ -51,7 +51,7 @@ ctx.fill();
 
 //armata 
 ctx.beginPath();
-ctx.arc(370,150,70,0,2*Math.PI);
+ctx.arc(340,150,60,0,2*Math.PI);
 ctx.stroke();
 
 ctx.fillStyle = "#3399FF";
@@ -59,7 +59,7 @@ ctx.fill();
 
 //mniejsze w armacie
 ctx.beginPath();
-ctx.arc(370,150,40,0,2*Math.PI);
+ctx.arc(340,150,35,0,2*Math.PI);
 ctx.stroke();
 
 ctx.fillStyle = "#3399FF";
@@ -126,15 +126,14 @@ ctx.lineTo(50,90);
 ctx.stroke();
 
 
-
 //gorna czesc
 
 //dolna czesc
 
 //1 linia ty kurwo 
 ctx.beginPath();
-ctx.moveTo(180, 250);
-ctx.quadraticCurveTo(160, 350, canvas.width-300, canvas.height-100);
+ctx.moveTo(200, 250);
+ctx.quadraticCurveTo(150, 350, canvas.width-300, canvas.height-100);
 ctx.stroke();
 
 ctx.fillStyle = "#00CC66";
@@ -142,39 +141,85 @@ ctx.fill();
 
 //2 linia ty szmato
 ctx.beginPath();
-ctx.moveTo(220, 250);
-ctx.quadraticCurveTo(180, 350, canvas.width-250, canvas.height-100);
+ctx.moveTo(200, 250);
+ctx.quadraticCurveTo(260, 250, canvas.width-300, canvas.height-100);
 ctx.stroke();
 
 ctx.fillStyle = "#00CC66";
 ctx.fill();
 
-//3 linia ty ruro
+//liscie - 1 polowka liscia 
 ctx.beginPath();
-ctx.moveTo(199,400);
-ctx.lineTo(250,400);
+ctx.moveTo(290, 430);
+ctx.quadraticCurveTo(230, 370, canvas.width-300, canvas.height-100);
 ctx.stroke();
 
 ctx.fillStyle = "#00CC66";
 ctx.fill();
 
-
-//liscie 
+//liscie - 2 polowka liscia 
 ctx.beginPath();
-ctx.arc(180,435,40,0,2*Math.PI);
+ctx.moveTo(290, 430);
+ctx.quadraticCurveTo(140, 400, canvas.width-300, canvas.height-100);
 ctx.stroke();
-
 
 ctx.fillStyle = "#00CC66";
 ctx.fill();
 
+//liscie - 3 polowka liscia 
 ctx.beginPath();
-ctx.arc(260,430,40,0,2*Math.PI);
+ctx.moveTo(90, 430);
+ctx.quadraticCurveTo(150, 370, canvas.width-300, canvas.height-100);
 ctx.stroke();
 
 ctx.fillStyle = "#00CC66";
 ctx.fill();
 
+//liscie - 4 polowka liscia 
+ctx.beginPath();
+ctx.moveTo(90, 430);
+ctx.quadraticCurveTo(240, 400, canvas.width-300, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+//liscie - 5 polowka liscia 
+ctx.beginPath();
+ctx.moveTo(130, 340);
+ctx.quadraticCurveTo(170, 330, canvas.width-300, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+//liscie - 6 polowka liscia 
+ctx.beginPath();
+ctx.moveTo(130, 340);
+ctx.quadraticCurveTo(80, 360, canvas.width-300, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+//liscie - 7 polowka liscia 
+ctx.beginPath();
+ctx.moveTo(270, 340);
+ctx.quadraticCurveTo(210, 340, canvas.width-300, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
+
+
+//liscie - 8 polowka liscia 
+ctx.beginPath();
+ctx.moveTo(270, 340);
+ctx.quadraticCurveTo(300, 370, canvas.width-300, canvas.height-100);
+ctx.stroke();
+
+ctx.fillStyle = "#00CC66";
+ctx.fill();
 
 </script> 
 
