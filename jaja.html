@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Imie <input type="text" name="i" id="i" > <br/>
+       <br>
+       Nazwisko <input type="text" name="h" id="h" > <br/>
+       <br>
+       Cm w lapie <input type="text" name="j" id="j" > <br/>
+       <br>
+       Cm kutasa <input type="text" name="k" id="k"> <br/>
+   <br><br> 
+   <button onclick="Wyslij()">Click me</button>
+     <script>
+        function Wyslij(){
+        var imie_wynik=document.getElementById("i").value;
+        var nazwisko_wynik=document.getElementById("h").value;
+        var lapie_wynik=document.getElementById("j").value;
+        var kutasa_wynik=document.getElementById("k").value; 
+        const tab = [];
+        tab.push(imie_wynik);
+        tab.push(nazwisko_wynik);
+        tab.push(lapie_wynik);
+        tab.push(kutasa_wynik);
+        console.log(tab);
+        tab.push("Gruby");
+        console.log(tab[0]);
+        tab.sort();
+        console.log(tab);
+        }
+        </script>
+</body>
+</html>
