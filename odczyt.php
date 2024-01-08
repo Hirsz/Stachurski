@@ -3,6 +3,8 @@ session_start();
 ?>
 
 <?php
-echo 'imie'.$_SESSION['xxx'].'rozmiar' .$_SESSION['zzz']. 'cm' ;
+echo"imie";
+echo ('imie '".$_SESSION['xxx']."' nazwisko'".$_SESSION['zzz']."'plec'".$_SESSION['yyy']."'Dieta'".$_SESSION['lll']."'Rodzaj'".$_SESSION['ggg']."'Ilosc'".$_SESSION['hhh']."')" ;
+
 
 ?>
