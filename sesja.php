@@ -1,69 +1,52 @@
-<html>
-<body>
-
-
-<form action="odczyt.php" method="POST">
-
-<h1>Jaki rodzaj diety?</h1>
-    <input type="radio" id="Dieta"  name="Dieta" value="Cud">Cud<br>
-    <input type="radio" id="Dieta" name="Dieta" value="Koks">Koks<br>
-    <input type="radio" id="Dieta" name="Dieta"value="Vege">Vege<br>
-<br>
-
-<h1>Jaki rodzaj treningu?</h1>
-    <input type="radio" id="Rodzaj" value="Boks">Boks<br>
-    <input type="radio" id="Rodzaj" value="Silownia">Silownia<br>
-    <input type="radio" id="Rodzaj" value="MMA">MMA<br>
-<br>
-
-<h1>Ilosc treningow?</h1>
-    <input type="radio" id="Ilosc" value="2t">2 razy w tygodniu<br>
-    <input type="radio" id="Ilosc" value="3t">3 razy w tygodniu<br>
-    <input type="radio" id="Ilosc" value="5t">5 razy w tygodniu<br>
-
-
-
-</body>
-</html>
-
 <?php
 session_start();
+$rozmiar_cyckow=$_GET["rozmiar_cyckow"];
+$rozmiar_kutasa=$_GET["rozmiar_kutasa"];
+$rozmiar_glowy=$_GET["rozmiar_glowy"];
+$rozmiar_iq=$_GET["rozmiar_iq"];
+$rozmiar_stopy=$_GET["rozmiar_stopy"];
+$rozmiar_dupy=$_GET["rozmiar_dupy"];
+$dodatki=$_GET["dodatki"];
+ 
+
+
+
+
+
+ 
+$_SESSION["rozmiar_cyckow"] = "$rozmiar_cyckow";
+$_SESSION["rozmiar_kutasa"] = "$rozmiar_kutasa";
+$_SESSION["rozmiar_glowy"] = "$rozmiar_glowy";
+$_SESSION["rozmiar_iq"] = "$rozmiar_iq";
+$_SESSION["rozmiar_stopy"] = "$rozmiar_stopy";
+$_SESSION["rozmiar_dupy"] = "$rozmiar_dupy";
+$_SESSION["Dodatki"] = "$dodatki";
+ 
+
+
+
+
+ 
+$zapisywanie = "<Czlowiek>\n".
+"<Dane>\n".
+"<rozmiar_cyckow>" . $_SESSION["rozmiar_cyckow"] . "</rozmiar_cyckow>\n" .
+"<rozmiar_kutasa>" . $_SESSION["rozmiar_kutasa"] . "</rozmiar_kutasa>\n" .
+"</Dane>\n".
+"<Ubior>\n".
+"<rozmiar_glowy>" . $_SESSION["rozmiar_glowy"] . "</rozmiar_glowy>\n" .
+"<rozmiar_iq>" . $_SESSION["rozmiar_iq"] . "</rozmiar_iq>\n" .
+"<rozmiar_stopy>" . $_SESSION["rozmiar_stopy"] . "</rozmiar_stopy>\n" .
+"<rozmiar_dupy>" . $_SESSION["rozmiar_dupy"] . "</rozmiar_dupy>\n" .
+"<dodatki>" . $_SESSION["Dodatki"] . "</dodatki>\n" .
+"</Ubior>\n".
+"</Czlowiek>";
+$fp = fopen("plik.xml", "w");
+fputs($fp, $zapisywanie);
+fclose($fp);
 ?>
-
-<?php
-
-$imie = $_POST['imie'];
-$nazwisko = $_POST['nazwisko'];
-$Plec = $_POST['Plec'];
-$Dieta = $_POST['Dieta'];
-$Rodzaj = $_POST['Rodzaj'];
-$Ilosc = $_POST['Ilosc'];
-
-$_SESSION["xxx"] = $imie;
-print_r($_SESSION["xxx"]);
-
-$_SESSION["zzz"] = $nazwisko;
-print_r($_SESSION["zzz"]);
-
-$_SESSION["yyy"] = $Plec;
-print_r($_SESSION["yyy"]);
-
-$_SESSION["lll"] = $Dieta;
-print_r($_SESSION["lll"]);
-
-$_SESSION["ggg"] = $Rodzaj;
-print_r($_SESSION["ggg"]);
-
-$_SESSION["hhh"] = $Ilosc;
-print_r($_SESSION["hhh"]);
-
-?>
-
 <html>
 <body>
-
-<a href="odczyt.php"><button type="submit">Wyslij</button></a>
-
-</form>
+ 
+<a href="plik.xml">Przejdz do pliku plik.xml</a>
 </body>
 </html>
