@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<link rel="stylesheet" href="arkusz.css">
+</br></br>
+    Imie: <input type="text" id="imie" > <br/>
+    <br>
+    Nazwisko: <input type="text" id="nazwisko" > <br/>
+    <br>
+    E-mail: <input type="text" id="email" > <br/>
+    <br>
+    Usługi:
+    <br>
+    <textarea id="uslugi" cols="50" rows="10"></textarea>
+    <br>
+    <input type="checkbox" id="check" >Zapoznałam/em się z regulaminem
+   <br><br> 
+   <button type="reset" >Resetuj</button>
+   <button onclick="formularz();">Prześlij</button>
+   <p id="demo"></p>
+   <p id="chuj"></p>
+
+<script>
+function formularz() {
+var kkk=document.getElementById("imie").value; 
+var lll=document.getElementById("nazwisko").value; 
+var jjj=document.getElementById("email").value; 
+var hhh=document.getElementById("uslugi").value; 
+
+  document.getElementById("demo").innerHTML = kkk + ' ' + lll + '<br/> ' + jjj + '<br/> ' + hhh;
+}
+</script>
+</body>
+</html>
